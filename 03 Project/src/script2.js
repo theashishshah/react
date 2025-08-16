@@ -29,3 +29,15 @@ const app = () => {
 
 const container = document.getElementById("root")
 ReactDOM.createRoot(container).render(React.createElement(app))
+
+/** The above the the react, this is how react was written, but but this is so painful that we can't write every element like this we want to write like this
+ * 
+ */
+const Navbar = () => {
+    return (
+        <div>
+            <h1>Hello this is jsx system</h1>
+            <p>To convert this type of system into react, we need babel</p>
+        </div>
+    )
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<title>How to take babel into picture</title>
+	</head>
+	<body>
+        <div id="root">Hello, this is classic react with babel</div>
+        <script src="https://unpkg.com/@babel/standalone@7.28.3/babel.min.js"></script>
+        <script type="text/babel" >
+            const chai = () => {
+                return(
+                    <div>
+                        <h1>This is inside React jsx type component</h1>
+                        <p>Hello, This is not classic jsx but this is using babel compiler to convert it into react code and react is getting converted into js code</p>
+                    </div>
+                )
+            }
+
+            const container = document.getElementById("root")
+            console.log("what am i getting inside container: ", container)
+            const root = ReactDOM.createRoot(container)
+            root.render(React.createElement(chai))
+        </script>
+    </body>
+</html>
