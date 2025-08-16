@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To-Do</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>To-Do application</h1>
+		</div>
+	</body>
+	<script type="module">
+		function appendChild(value, color) {
+			const container = document.querySelector(".container");
+			const ele = document.createElement("div");
+			ele.innerText = value;
+			ele.style.color = color;
+			ele.style.fontFamily = "inter";
+			ele.style.fontSize = "20px";
+			container.appendChild(ele);
+		}
+
+        for(let i = 0; i < 3; i++){
+            appendChild("Hello my name is Ashish Shah"+i, "#b20fc4ff")
+        }
+	</script>
+</html>
