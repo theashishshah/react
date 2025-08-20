@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learn about input file type</title>
+    </head>
+    <body>
+        <h1>Hello from file input</h1>
+        <input type="file" name="file" id="myFileInput" multiple/>
+        <script>
+            const input = document.getElementById("myFileInput");
+
+            input.addEventListener("change", (e) => {
+                const file = e.target.files[0];
+
+                if (file) {
+                    const { name, size, type, lastModified, lastModifiedDate } = file;
+
+                    console.log("name: ", name);
+                    console.log("size: ", size / 1024, "KB");
+                    console.log("type: ", type);
+                    console.log("lastModified: ", lastModified);
+                    console.log("lastModifiedDate: ", lastModifiedDate);
+
+                    console.log("Full file object:", file);
+                }
+
+                console.log("what does input event contains", e.target.files[0]);
+            });
+        </script>
+    </body>
+</html>
